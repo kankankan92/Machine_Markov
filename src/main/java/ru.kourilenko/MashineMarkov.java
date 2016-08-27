@@ -11,8 +11,12 @@ public class MashineMarkov {
         instructions = Parser.parse(fileName.trim());
     }
 
-    public void setFileNameWithString(String fileName) throws IOException {
-        setFileName(fileName);
+    public void setFileNameWithString(String fileName) {
+        try {
+            setFileName(fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

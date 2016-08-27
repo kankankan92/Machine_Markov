@@ -1,9 +1,7 @@
 package ru.kourilenko;
 
-import java.io.IOException;
-
 public class Main {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args){
 
         MashineMarkov mashine = new MashineMarkov();
         switch (args.length) {
@@ -20,13 +18,13 @@ public class Main {
                         System.out.println(Consts.help);
                         break;
                     default:
-                        mashine.setFileName(args[0]);
+                        mashine.setFileNameWithString(args[0]);
                         mashine.runMultiple();
                 }
 
                 break;
             case 2:
-                mashine.setFileName(args[0]);
+                mashine.setFileNameWithString(args[0]);
                 mashine.runOnce(args[1]);
                 break;
             default:
